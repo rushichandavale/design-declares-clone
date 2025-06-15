@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         primary: 'rgb(255, 99, 64)', // UK and progress bar color
       },
+      
     },
   },
   plugins: [],
