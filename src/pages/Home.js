@@ -8,7 +8,7 @@ import Newsletter from '../components/home/Newsletter';
 
 const Home = () => {
   return (
-    <div className="bg-black">
+    <div>
       <HeroSection />
       <Breakdown />
       <Donate />

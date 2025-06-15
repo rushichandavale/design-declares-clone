@@ -13,8 +13,8 @@ const Newsletter = () => {
   };
 
   return (
-    <Element name="newsletter" className="bg-black text-white py-8 lg:py-16">
-      <div className="relative min-h-screen">
+    <Element name="newsletter" className="bg-black text-white py-8 lg:py-16 ">
+      <div className="relative min-h-screen ">
         {/* Left: Title */}
         <div
           className="w-full lg:w-[30%] px-4 md:px-8 lg:px-16 pt-8 sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
@@ -50,7 +50,7 @@ const Newsletter = () => {
               below.
             </motion.p>
             <motion.div
-              className="bg-black text-white border border-white p-6"
+              className="bg-black text-white p-6"
               variants={containerVariants}
             >
               <motion.div className="border border-white mb-6" variants={fadeUp}>
