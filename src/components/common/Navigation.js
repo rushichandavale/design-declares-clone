@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom'; // Alias for react-router-dom Link
-import { Link as ScrollLink } from 'react-scroll'; // Import for react-scroll Link
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { PlusIcon, HomeIcon, InformationCircleIcon, NewspaperIcon, EnvelopeIcon, GlobeAltIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
@@ -12,15 +12,23 @@ const Navigation = () => {
   const toggleMenu = () => {
     if (isOpen) {
       setShowOptions(false);
-      setTimeout(() => setIsOpen(false), 300); // Delay menu shrink until options exit (0.3s)
+      setTimeout(() => setIsOpen(false), 300);
     } else {
       setIsOpen(true);
     }
   };
 
   const menuVariants = {
-    closed: { width: 250 },
-    open: { width: 350, transition: { duration: 0.3, ease: 'easeInOut' } },
+    closed: { width: 250 }, // Default width for desktop (sm and above)
+    open: {
+      width: 350,
+      transition: { duration: 0.3, ease: 'easeInOut' },
+    },
+  };
+
+  const mobileMenuVariants = {
+    closed: { width: '100%' }, // Full width for mobile
+    open: { width: '100%', transition: { duration: 0.3, ease: 'easeInOut' } },
   };
 
   const optionVariants = {
@@ -66,8 +74,8 @@ const Navigation = () => {
   return (
     <>
       <motion.nav
-        className="fixed bottom-4 right-4 bg-heading text-black border border-black shadow-lg z-40"
-        variants={menuVariants}
+        className="fixed bottom-0  sm:bottom-4 sm:right-4 bg-heading text-black border border-black shadow-lg z-40 w-full sm:w-auto"
+        variants={window.innerWidth < 640 ? mobileMenuVariants : menuVariants} // Use mobile variants for xs, desktop for sm+
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
         onAnimationComplete={() => {
@@ -79,7 +87,7 @@ const Navigation = () => {
         <div className="flex flex-col">
           <button
             onClick={toggleMenu}
-            className="flex items-baseline justify-between px-4 py-3 text-[1.5rem] font-normal hover:bg-gray-100 border-b border-black"
+            className="flex items-baseline justify-between px-4 py-3 text-[1.5rem] font-normal hover:bg-gray-100 border-b border-black w-full"
           >
             <div className="flex items-baseline">
               <span>Menu</span>
@@ -96,14 +104,14 @@ const Navigation = () => {
             {isOpen && showOptions && (
               <div className="flex flex-col px-4 space-y-2">
                 {navOptions.map((option, i) => (
-                  <div
+                  <motion.div
                     key={option.name}
                     custom={i}
                     variants={optionVariants}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="flex items-center space-x-2"
+                    className="flex items-center space-x-2 w-full"
                   >
                     <option.icon className="h-6 w-6" />
                     {option.name === 'Choose Global Chapter' ? (
@@ -113,14 +121,14 @@ const Navigation = () => {
                           setShowOptions(false);
                           setTimeout(() => setIsOpen(false), 300);
                         }}
-                        className="text-[1.5rem] font-normal hover:text-gray-600 text-left"
+                        className="text-[1.5rem] font-normal hover:text-gray-600 text-left w-full"
                       >
                         {option.name}
                       </button>
                     ) : (
                       <RouterLink
                         to={option.path}
-                        className="text-[1.5rem] font-normal hover:text-gray-600"
+                        className="text-[1.5rem] font-normal hover:text-gray-600 w-full"
                         onClick={() => {
                           setShowOptions(false);
                           setTimeout(() => setIsOpen(false), 300);
@@ -129,7 +137,7 @@ const Navigation = () => {
                         {option.name}
                       </RouterLink>
                     )}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             )}
@@ -140,7 +148,7 @@ const Navigation = () => {
             to="declare"
             smooth={true}
             duration={500}
-            className="px-4 py-3 text-[1.5rem] font-normal hover:bg-gray-100 border-t border-b border-black cursor-pointer"
+            className="px-4 py-3 text-[1.5rem] font-normal hover:bg-gray-100 border-t border-b border-black cursor-pointer block w-full"
             onClick={() => {
               setShowOptions(false);
               setTimeout(() => setIsOpen(false), 300);

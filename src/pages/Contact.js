@@ -12,7 +12,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-black text-heading border-b border-black rounded-b-3xl">
+    <div className="bg-black text-white border-b border-black rounded-b-3xl">
       {/* Logo at Top Left */}
       <div className="top-4 left-4 z-30 p-4">
         <Link
@@ -42,7 +42,7 @@ const Contact = () => {
           <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start px-2 md:px-4 lg:px-8">
             {/* Left: Title */}
             <div
-              className="w-full lg:w-[30%] px-2 md:px-4 lg:px-8 pt-8 sticky top-0 z-20 transition-all duration-200 will-change-[position,top]"
+              className="w-full lg:w-[30%] px-2 md:px-4 lg:px-8 pt-8 lg:sticky lg:top-0 z-20 transition-all duration-200 will-change-[position,top]"
             >
               <motion.h2 className="text-[1.5rem] font-semibold" variants={fadeUp}>
                 Contact
@@ -67,7 +67,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-heading border-none focus:ring-0 focus:outline-none"
+                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-white border-none focus:ring-0 focus:outline-none"
                       required
                     />
                   </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="email"
-                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-heading border-none focus:ring-0 focus:outline-none"
+                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-white border-none focus:ring-0 focus:outline-none"
                       required
                     />
                   </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                       Team to contact:*
                     </label>
                     <select
-                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-heading border-none focus:ring-0 focus:outline-none"
+                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-white border-none focus:ring-0 focus:outline-none"
                       required
                     >
                       <option value="">Select a team</option>
@@ -101,7 +101,7 @@ const Contact = () => {
                       Enquiry type:*
                     </label>
                     <select
-                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-heading border-none focus:ring-0 focus:outline-none"
+                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-white border-none focus:ring-0 focus:outline-none"
                       required
                     >
                       <option value="">Select an enquiry type</option>
@@ -114,7 +114,7 @@ const Contact = () => {
                   <div className="flex">
                     <textarea
                       placeholder="Please write your message here"
-                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-heading border-none focus:ring-0 focus:outline-none resize-y"
+                      className="text-[1.125rem] font-normal px-6 py-3 w-full bg-black text-white border-none focus:ring-0 focus:outline-none resize-y"
                       rows="6"
                     ></textarea>
                   </div>
@@ -123,13 +123,13 @@ const Contact = () => {
                   <label className="flex items-center">
                     <input
                       type="checkbox"
-                      className="appearance-none min-w-12 min-h-12 w-12 h-12 mr-4 border-2 border-white bg-transparent flex-shrink-0 checked:bg-transparent checked:border-white checked:after:content-['✓'] checked:after:text-heading checked:after:text-2xl checked:after:flex checked:after:items-center checked:after:justify-center checked:after:h-full"
+                      className="appearance-none min-w-12 min-h-12 w-12 h-12 mr-4 border-2 border-white bg-transparent flex-shrink-0 checked:bg-transparent checked:border-white checked:after:content-['✓'] checked:after:text-white checked:after:text-2xl checked:after:flex checked:after:items-center checked:after:justify-center checked:after:h-full"
                     />
                     <span className="text-[.75rem] font-normal leading-tight">
                       I would like to be added to the Design Declares! newsletter and receive further updates.
                     </span>
                   </label>
-                  <Link to="/privacy-policy" className="text-[.75rem] text-heading underline">
+                  <Link to="/privacy-policy" className="text-[.75rem] text-white underline">
                     View our Privacy Policy
                   </Link>
                 </motion.div>

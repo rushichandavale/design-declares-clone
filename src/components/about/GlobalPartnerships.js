@@ -23,10 +23,10 @@ const GlobalPartnerships = () => {
   return (
     <Element name="global-partnerships" className="bg-black py-16 lg:py-32">
       <div className="relative">
-        <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start px-20">
+        <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start lg:px-20 md:px-16 px-4">
           {/* Left: Title */}
           <div
-            className="w-full px-2 md:px-4 lg:px-8 pt-8 sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
+            className="w-full px-2 md:px-4 lg:px-8 pt-8 lg:sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
           >
             <motion.h2
               className="text-[1.5rem] font-semibold text-heading"
@@ -67,7 +67,7 @@ const GlobalPartnerships = () => {
                   </p>
                   <Link
                     to="#"
-                    className="inline-block w-fit bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 transition-colors"
+                    className="inline-block bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 md:w-auto text-center"
                   >
                     Get in Touch
                   </Link>

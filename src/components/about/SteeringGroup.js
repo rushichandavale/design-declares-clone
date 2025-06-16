@@ -26,10 +26,10 @@ const SteeringGroup = () => {
   return (
     <Element name="steering-group" className="bg-black py-16 lg:py-32">
       <div className="relative">
-        <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start px-20">
+        <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start lg:px-20 md:px-16 px-4">
           {/* Left: Title */}
           <div
-            className="w-full px-2 md:px-4 lg:px-8 pt-8 sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
+            className="w-full px-2 md:px-4 lg:px-8 pt-8 lg:sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
           >
             <motion.h2
               className="text-[1.5rem] font-semibold text-heading"
@@ -51,8 +51,7 @@ const SteeringGroup = () => {
           >
             <div className="flex flex-col space-y-8">
               {/* Side-by-Side Images and Labels */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                {/* Person 1 */}
+              <div className="flex gap-8 overflow-x-auto pb-2 md:grid md:grid-cols-4 md:gap-8 md:overflow-x-visible">
                 <div className="flex flex-col">
                   <img
                     src={steering1}

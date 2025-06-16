@@ -39,7 +39,7 @@ const ActsOfEmergency = () => {
         <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start lg:px-20 md:px-16 px-4">
           {/* Left: Title */}
           <div
-            className="w-full px-2 md:px-4 lg:px-8 pt-8 sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
+            className="w-full px-2 md:px-4 lg:px-8 pt-8 lg:sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
           >
             <motion.h2
               className="text-[1.5rem] font-semibold text-heading"

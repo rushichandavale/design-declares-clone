@@ -308,7 +308,7 @@ const Latest = () => {
       {/* Main Content */}
       <Element name="latest" className="bg-black text-heading py-2 lg:py-4">
         <div className="relative min-h-screen">
-          <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start px-20">
+          <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start lg:px-20 md:px-16 px-4">
             {/* Left: Titles and Buttons */}
             <div className="w-full px-2 md:px-4 lg:px-8 pt-8 top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]">
               <motion.h2

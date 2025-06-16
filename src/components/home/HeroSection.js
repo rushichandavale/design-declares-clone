@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 
 const HeroSection = () => {
-  // Animation variants for text reveal
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,7 +20,7 @@ const HeroSection = () => {
   return (
     <Element
       name="home"
-      className="min-h-screen  flex flex-col lg:flex-row justify-between px-4 md:px-8 pt-8 lg:p-4"
+      className="min-h-screen flex flex-col lg:flex-row justify-between px-4 md:px-8 pt-8 lg:p-4"
     >
       <motion.div
         className="lg:w-1/2 flex flex-col justify-start items-start"
@@ -40,9 +39,25 @@ const HeroSection = () => {
             {word}
           </motion.h1>
         ))}
+        {/* Paragraph for mobile view */}
+        <motion.div
+          className="flex flex-col justify-start items-start lg:hidden mt-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+        >
+          <p className="text-lg md:text-xl text-heading max-w-md text-left leading-tight">
+            Design Declares is a growing group of designers, design studios,
+            agencies and institutions here to declare a climate and ecological
+            emergency. As part of the global declaration movement, we commit to
+            harnessing the tools of our industry to reimagine, rebuild and heal
+            our world.
+          </p>
+        </motion.div>
       </motion.div>
+      {/* Paragraph for desktop view */}
       <motion.div
-        className="lg:w-1/2 mt-8 lg:mt-0 flex flex-col justify-start items-end"
+        className="hidden lg:flex lg:w-1/2 mt-8 lg:mt-0 flex-col justify-start items-end p-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.9 }}

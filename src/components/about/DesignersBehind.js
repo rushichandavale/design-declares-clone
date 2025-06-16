@@ -28,10 +28,10 @@ const DesignersBehind = () => {
   return (
     <Element name="designers-behind" className="bg-black py-16 lg:py-32">
       <div className="relative">
-        <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start px-20">
+        <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start lg:px-20 md:px-16 px-4">
           {/* Left: Title */}
           <div
-            className="w-full px-2 md:px-4 lg:px-8 pt-8 sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
+            className="w-full px-2 md:px-4 lg:px-8 pt-8 lg:sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
           >
             <motion.h2
               className="text-[1.5rem] font-semibold text-heading"
@@ -61,39 +61,39 @@ const DesignersBehind = () => {
               </p>
 
               {/* Side-by-Side Images */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-                <div className="flex flex-col space-y-24">
+              <div className="grid grid-cols-2 gap-8 md:gap-20">
+                <div className="flex flex-col space-y-8 md:space-y-24">
                   <img
                     src={designer1}
                     alt="Designer 1"
-                    className="w-44 object-contain"
+                    className="w-24 md:w-44 object-contain"
                   />
                   <img
                     src={designer2}
                     alt="Designer 2"
-                    className="w-44 object-contain"
+                    className="w-24 md:w-44 object-contain"
                   />
                   <img
                     src={designer3}
                     alt="Designer 3"
-                    className="w-44 object-contain"
+                    className="w-24 md:w-44 object-contain"
                   />
                 </div>
-                <div className="flex flex-col space-y-24">
+                <div className="flex flex-col space-y-8 md:space-y-24">
                   <img
                     src={designer4}
                     alt="Designer 4"
-                    className="w-44 object-contain"
+                    className="w-24 md:w-44 object-contain"
                   />
                   <img
                     src={designer5}
                     alt="Designer 5"
-                    className="w-44 object-contain"
+                    className="w-24 md:w-44 object-contain"
                   />
                   <img
                     src={designer6}
                     alt="Designer 6"
-                    className="w-32 object-contain"
+                    className="w-20 md:w-32 object-contain"
                   />
                 </div>
               </div>

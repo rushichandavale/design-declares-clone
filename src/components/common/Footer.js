@@ -15,42 +15,44 @@ const Footer = () => {
           </h2>
         </div>
 
-        {/* Second Part: Links */}
-        <div className="flex flex-col space-y-4">
-          <Link
-            to="#"
-            className="text-[1.125rem] font-normal  hover:underline transition-colors"
-          >
-            Contact
-          </Link>
-          <Link
-            to="#"
-            className="text-[1.125rem] font-normal  hover:underline transition-colors"
-          >
-            Instagram
-          </Link>
-          <Link
-            to="#"
-            className="text-[1.125rem] font-normal  hover:underline transition-colors"
-          >
-            LinkedIn
-          </Link>
-          <Link
-            to="#"
-            className="text-[1.125rem] font-normal  hover:underline transition-colors"
-          >
-            Privacy Policy
-          </Link>
+        {/* Second Part: Links and Newsletter */}
+        <div className="flex flex-col md:flex-col">
+          <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4">
+            <Link
+              to="#"
+              className="text-[1.125rem] font-normal hover:underline transition-colors flex-1 text-center"
+            >
+              Contact
+            </Link>
+            <Link
+              to="#"
+              className="text-[1.125rem] font-normal hover:underline transition-colors flex-1 text-center"
+            >
+              Instagram
+            </Link>
+          </div>
+          <div className="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4 mt-4 md:mt-0">
+            <Link
+              to="#"
+              className="text-[1.125rem] font-normal hover:underline transition-colors flex-1 text-center"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              to="#"
+              className="text-[1.125rem] font-normal hover:underline transition-colors flex-1 text-center"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
-
-        {/* Third Part: Newsletter */}
         <div className="flex flex-col space-y-4">
           <p className="text-[1.125rem] font-bold">Sign up to the D! Newsletter</p>
           {/* Input Field */}
-          <div className="flex items-center border border-black">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center border border-black">
             <label
               htmlFor="email"
-              className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0"
+              className="text-[1.125rem] font-normal px-6 py-3 w-full md:w-40 shrink-0"
             >
               Email:*
             </label>
@@ -62,7 +64,7 @@ const Footer = () => {
             />
           </div>
           {/* Checkbox and Subscribe Button */}
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col md:flex-row items-stretch md:items-center space-y-4 md:space-y-0 md:space-x-4">
             <label className="flex items-center flex-1">
               <input
                 type="checkbox"
@@ -75,7 +77,7 @@ const Footer = () => {
               </span>
             </label>
             <button
-              className="bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 transition-colors w-fit"
+              className="bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 md:w-auto text-center"
             >
               Subscribe
             </button>
