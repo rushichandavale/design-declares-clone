@@ -1,6 +1,7 @@
+import { useEffect, useRef, useState } from 'react';
 import { Element } from 'react-scroll';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, useInView, useAnimation, animate } from 'framer-motion';
 
 const Signatories = () => {
   const fadeUp = {
@@ -11,17 +12,37 @@ const Signatories = () => {
     animate: { transition: { staggerChildren: 0.1 } },
   };
 
-  // Counter animation
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, Math.round);
+  // Counter animation state
+  const targetCount = 513;
+  const [count, setCount] = useState(0);
 
+  // Scroll-triggered animation for the counter section
+  const counterRef = useRef(null);
+  const counterIsInView = useInView(counterRef, { once: true, margin: '0px 0px -100px 0px' });
+  const counterControls = useAnimation();
+
+  // Scroll-triggered animation for the signatories list
+  const listRef = useRef(null);
+  const listIsInView = useInView(listRef, { once: true, margin: '0px 0px -100px 0px' });
+  const listControls = useAnimation();
+
+  // Animate counter from 0 to 513
   useEffect(() => {
-    const animation = animate(count, 513, {
-      duration: 2,
-      ease: 'easeOut',
-    });
-    return () => animation.stop();
-  }, [count]);
+    if (counterIsInView) {
+      counterControls.start('animate');
+      animate(0, targetCount, {
+        duration: 2,
+        onUpdate: (value) => setCount(Math.floor(value)),
+      });
+    }
+  }, [counterIsInView, counterControls, targetCount]);
+
+  // Animate signatories list
+  useEffect(() => {
+    if (listIsInView) {
+      listControls.start('animate');
+    }
+  }, [listIsInView, listControls]);
 
   // Signatories list
   const signatories = [
@@ -125,41 +146,142 @@ const Signatories = () => {
     'VIVID NINE', 'Vovi', 'Vox Aeris', 'Vu Online', 'We Are Service Works Ltd', 'We Are Systematic',
     'We Made This Ltd', 'We Mean This', 'WEAMO', 'West9 Design', 'White Weft Limited',
     'Wholegrain Digital', 'WizzDev', 'Working with Joe Ltd', 'Works in Public Ltd',
-    'www.archetypeaccessories.com', 'xforwhy', 'XTATX Studio', 'Yarn Creative', 'yesim tuzun',
+    'www.archetype.com', 'xforwhy', 'XTATX Studio', 'Yarn Creative', 'yesim tuzun',
     'Yoke design', 'Zebra Growth Limited', 'Zoe Bather', 'ZOOZLY'
   ];
 
-  return (
-    <Element name="signatories" className="  py-2 lg:py-4">
-      <div className="relative min-h-screen">
-        <div className="px-2 md:px-4 lg:px-8 pt-8">
-          {/* Counter, Title, Button */}
-          <motion.div
-            className="flex flex-col space-y-4"
-            variants={containerVariants}
-            initial="initial"
-            animate="animate"
-          >
-            <motion.div className="text-6xl font-normal" variants={fadeUp}>
-              #<motion.span>{rounded}</motion.span>
-            </motion.div>
-            <motion.div className="flex items-center space-x-2" variants={fadeUp}>
-              <span className="text-[1.5rem] font-semibold">Signatories and counting in</span>
-              <a
-                href="/uk" // Updated href to a meaningful route
-                className="inline-block px-3 py-1 text-[.75rem] font-normal bg-primary text-heading rounded-full hover:bg-gray-800"
-                aria-label="View Design Declares UK"
-              >
-                D! UK
-              </a>
-            </motion.div>
-          </motion.div>
+  // Distribute signatories into columns (column-wise distribution)
+  const distributeIntoColumns = (items, numColumns) => {
+    const columns = Array.from({ length: numColumns }, () => []);
+    items.forEach((item, index) => {
+      const columnIndex = index % numColumns; // Distribute vertically (column-wise)
+      columns[columnIndex].push(item);
+    });
+    return columns;
+  };
 
-          {/* Signatories Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-9 gap-2 mt-8">
-            {signatories.map((signatory, index) => (
-              <div key={index} className="text-[.75rem] font-normal">
-                {signatory}
+  // Responsive column counts
+  const getColumns = () => {
+    return {
+      xs: distributeIntoColumns(signatories, 3), // 3 columns for mobile
+      sm: distributeIntoColumns(signatories, 4), // 4 columns for small screens
+      md: distributeIntoColumns(signatories, 6), // 6 columns for medium screens
+      lg: distributeIntoColumns(signatories, 9), // 9 columns for large screens
+    };
+  };
+
+  const columns = getColumns();
+
+  return (
+    <Element name="signatories" className="bg-black text-heading py-16 lg:py-32">
+      <div className="relative px-4 sm:px-6 lg:px-20">
+        {/* Counter, Title, Button */}
+        <motion.div
+          ref={counterRef}
+          className="flex flex-col space-y-4 mb-12"
+          variants={containerVariants}
+          initial="initial"
+          animate={counterControls}
+        >
+          <motion.div className="text-6xl font-normal" variants={fadeUp}>
+            #<motion.span>{count}</motion.span>
+          </motion.div>
+          <motion.div className="flex items-center space-x-2" variants={fadeUp}>
+            <span className="text-[1.5rem] font-semibold">Signatories and counting in</span>
+            <Link
+              to="/uk"
+              className="inline-block px-3 py-1 text-[.75rem] font-normal bg-primary text-heading rounded-full hover:bg-gray-800"
+              aria-label="View Design Declares UK"
+            >
+              D! UK
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Signatories Columns */}
+        <div
+          ref={listRef}
+          className="w-full"
+          variants={containerVariants}
+          initial="initial"
+          animate={listControls}
+        >
+          {/* Mobile (xs): 3 columns */}
+          <div className="grid grid-cols-3 gap-4 sm:hidden">
+            {columns.xs.map((column, colIndex) => (
+              <div
+                key={colIndex}
+                className="flex flex-col space-y-2"
+                variants={fadeUp}
+              >
+                {column.map((signatory, index) => (
+                  <span
+                    key={index}
+                    className="text-[.75rem] font-normal text-subtext"
+                  >
+                    {signatory}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Small (sm): 4 columns */}
+          <div className="hidden sm:grid sm:grid-cols-4 sm:gap-4 md:hidden">
+            {columns.sm.map((column, colIndex) => (
+              <div
+                key={colIndex}
+                className="flex flex-col space-y-2"
+                variants={fadeUp}
+              >
+                {column.map((signatory, index) => (
+                  <span
+                    key={index}
+                    className="text-[.75rem] font-normal text-subtext"
+                  >
+                    {signatory}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Medium (md): 6 columns */}
+          <div className="hidden md:grid md:grid-cols-6 md:gap-4 lg:hidden">
+            {columns.md.map((column, colIndex) => (
+              <div
+                key={colIndex}
+                className="flex flex-col space-y-2"
+                variants={fadeUp}
+              >
+                {column.map((signatory, index) => (
+                  <span
+                    key={index}
+                    className="text-[.75rem] font-normal text-subtext"
+                  >
+                    {signatory}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Large (lg): 9 columns */}
+          <div className="hidden lg:grid lg:grid-cols-9 lg:gap-4">
+            {columns.lg.map((column, colIndex) => (
+              <div
+                key={colIndex}
+                className="flex flex-col space-y-2"
+                variants={fadeUp}
+              >
+                {column.map((signatory, index) => (
+                  <span
+                    key={index}
+                    className="text-[.75rem] font-normal text-subtext"
+                  >
+                    {signatory}
+                  </span>
+                ))}
               </div>
             ))}
           </div>
