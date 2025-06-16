@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Element } from 'react-scroll';
 
 const GlobalPartnerships = () => {
@@ -32,12 +33,12 @@ const GlobalPartnerships = () => {
                   It doesn’t matter where on the journey you are. What matters is that you’re here,
                   and you’re ready to do the work. Because there is no design on a dead planet.
                 </p>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="inline-block w-fit bg-white text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 transition-colors"
                 >
                   Get in Touch
-                </a>
+                </Link>
               </div>
               <div className="flex flex-col space-y-8">
                 <p className="text-[1.125rem] font-normal">
@@ -47,33 +48,33 @@ const GlobalPartnerships = () => {
                 <div>
                   <p className="text-[1.125rem] font-normal">Join our list of global partners...</p>
                   <p className="text-[1.125rem] font-normal mt-2">
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="underline hover:text-gray-200 transition-colors"
                     >
                       UK
-                    </a>
+                    </Link>
                     ,{' '}
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="underline hover:text-gray-200 transition-colors"
                     >
                       Ireland
-                    </a>
+                    </Link>
                     ,{' '}
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="underline hover:text-gray-200 transition-colors"
                     >
                       Brazil
-                    </a>
+                    </Link>
                     ,{' '}
-                    <a
-                      href="#"
+                    <Link
+                      to="#"
                       className="underline hover:text-gray-200 transition-colors"
                     >
                       Australia
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>

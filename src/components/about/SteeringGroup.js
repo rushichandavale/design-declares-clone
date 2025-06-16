@@ -6,11 +6,11 @@ import steering4 from '../../assets/images/jo.webp';
 
 const SteeringGroup = () => {
   return (
-    <Element name="steering-group" className="bg-black text-white py-8 lg:py-16">
+    <Element name="steering-group" className="py-8 lg:py-16">
       <div className="relative min-h-screen">
         {/* Left: Title */}
         <div
-          className="w-full lg:w-[40%] px-4 md:px-8 lg:px-16 pt-8 sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
+          className="w-full lg:w-[40%] px-4 md:px-8 lg:px-16 pt-8 sticky top-0 z-20 transition-all duration-200 will-change-[position,top]"
         >
           <h2 className="text-[1.5rem] font-semibold">Steering Group</h2>
         </div>

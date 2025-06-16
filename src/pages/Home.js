@@ -5,10 +5,12 @@ import ActsOfEmergency from '../components/home/ActsOfEmergency';
 import DeclareNow from '../components/home/DeclareNow';
 import LatestSection from '../components/home/LatestSection';
 import Newsletter from '../components/home/Newsletter';
+import Signatories from '../components/home/Signatories';
+import GlobalSupporters from '../components/home/GlobalSupporters';
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-black text-white border-b border-black rounded-b-3xl'>
       <HeroSection />
       <Breakdown />
       <Donate />
@@ -16,6 +18,8 @@ const Home = () => {
       <DeclareNow />
       <LatestSection />
       <Newsletter />
+      <Signatories />
+      <GlobalSupporters />
     </div>
   );
 };

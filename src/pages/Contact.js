@@ -12,13 +12,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white border-b border-black rounded-b-3xl">
       {/* Logo at Top Left */}
       <div className="top-4 left-4 z-30 p-4">
-        <a
+        <Link
           className="focus-ring group relative w-fit transition-colors inline-block"
           data-rac=""
-          href="/"
+          to="/"
         >
           <svg
             width="100%"
@@ -33,16 +33,16 @@ const Contact = () => {
             <path d="M15.052,59l-15.052,0l-0,-57.705l15.052,0c8.096,0 11.705,3.925 11.705,12.722l0,31.809c0,9.112 -3.609,13.174 -11.705,13.174Zm-3.574,-10.75l1.293,-0c1.61,-0 2.284,-0.453 2.284,-3.26l0,-30.29c0,-2.874 -0.895,-3.107 -1.978,-3.107l-1.599,-0l0,36.657Z"></path>
             <path d="M43.953,6.9l-6.44,36.806l-6.384,-36.813c-0.285,-3.719 2.668,-6.893 6.412,-6.893c3.748,0 6.704,3.181 6.412,6.904l0,-0.004Zm0.047,44.959c0,3.553 -2.911,6.433 -6.501,6.433c-3.59,-0 -6.501,-2.88 -6.501,-6.433c-0,-3.553 2.911,-6.434 6.501,-6.434c3.59,0 6.501,2.881 6.501,6.434Z"></path>
           </svg>
-        </a>
+        </Link>
       </div>
 
       {/* Main Content */}
-      <Element name="contact" className="bg-black text-white py-2 lg:py-4">
+      <Element name="contact" className="py-2 lg:py-4">
         <div className="relative min-h-screen">
           <div className="lg:grid lg:grid-cols-[40%_60%] lg:items-start px-2 md:px-4 lg:px-8">
             {/* Left: Title */}
             <div
-              className="w-full lg:w-[30%] px-2 md:px-4 lg:px-8 pt-8 sticky top-0 z-20 bg-black transition-all duration-200 will-change-[position,top]"
+              className="w-full lg:w-[30%] px-2 md:px-4 lg:px-8 pt-8 sticky top-0 z-20 transition-all duration-200 will-change-[position,top]"
             >
               <motion.h2 className="text-[1.5rem] font-semibold" variants={fadeUp}>
                 Contact

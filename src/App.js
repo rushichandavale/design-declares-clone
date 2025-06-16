@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-black text-white">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
         <div

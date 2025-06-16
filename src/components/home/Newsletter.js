@@ -13,7 +13,7 @@ const Newsletter = () => {
   };
 
   return (
-    <Element name="newsletter" className="bg-black text-white py-8 lg:py-16 ">
+    <Element name="newsletter" className="py-8 lg:py-16 ">
       <div className="relative min-h-screen ">
         {/* Left: Title */}
         <div

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Element } from 'react-scroll';
 
 const AboutDesignDeclares = () => {
@@ -27,12 +28,12 @@ const AboutDesignDeclares = () => {
 
             {/* Button */}
             <div>
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="inline-block bg-white text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 transition-colors"
               >
                 See Global Declarations
-              </a>
+              </Link>
             </div>
 
             {/* Side-by-Side Paragraphs */}
@@ -43,12 +44,12 @@ const AboutDesignDeclares = () => {
                   the choices we make can influence society’s behaviour, change economies and challenge
                   everything that’s come before.
                 </p>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="inline-block w-fit bg-white text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 transition-colors"
                 >
                   Declare Emergency Now
-                </a>
+                </Link>
               </div>
               <div className="flex flex-col space-y-8">
                 <p className="text-[1.125rem] font-normal">

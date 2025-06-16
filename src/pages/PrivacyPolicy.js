@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
   // State for title fixed state
@@ -43,7 +44,7 @@ const PrivacyPolicy = () => {
   };
 
   return (
-    <Element name="privacy-policy" className="bg-black text-white py-8 lg:py-16">
+    <Element name="privacy-policy" className="bg-black text-white border-b border-black rounded-b-3xl py-8 lg:py-16">
       <div ref={sectionRef} className="relative min-h-screen">
         {/* Left: Title */}
         <div
@@ -86,14 +87,14 @@ const PrivacyPolicy = () => {
               Cabin is built on the concept of privacy-by-design. Visitor data is stored in a unique
               data structure which makes it 100% anonymous and compliant with all privacy laws,
               globally. To learn more about Cabin,{' '}
-              <a
-                href="https://withcabin.com/"
+              <Link
+                to="https://withcabin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white underline"
               >
                 click here
-              </a>
+              </Link>
               .
             </motion.p>
             <motion.p className="text-[1.125rem] font-normal" variants={fadeUp}>
@@ -124,12 +125,12 @@ const PrivacyPolicy = () => {
             <motion.p className="text-[1.125rem] font-normal" variants={fadeUp}>
               If you have any questions or concerns about our use of your personal information, please
               let us know by sending an email to{' '}
-              <a
-                href="mailto:hello@designdeclares.com"
+              <Link
+                to="mailto:hello@designdeclares.com"
                 className="text-white underline"
               >
                 hello@designdeclares.com
-              </a>
+              </Link>
               .
             </motion.p>
           </motion.div>
