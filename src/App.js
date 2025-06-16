@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-heading">
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
         <div
@@ -32,8 +32,8 @@ function App() {
           style={{ width: `${scrollProgress}%`, transition: "width 0.2s ease" }}
         ></div>
       </div>
-      <main className="relative z-10 pb-[27rem]">
-        <Router>
+      <Router>
+        <main className="relative z-10 pb-[29rem]">
           <div className="App">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -44,9 +44,9 @@ function App() {
             </Routes>
             <Navigation />
           </div>
-        </Router>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </Router>
     </div>
   );
 }

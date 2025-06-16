@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
   };
 
   return (
-    <Element name="privacy-policy" className="bg-black text-white border-b border-black rounded-b-3xl py-8 lg:py-16">
+    <Element name="privacy-policy" className="bg-black text-heading border-b border-black rounded-b-3xl py-8 lg:py-16">
       <div ref={sectionRef} className="relative min-h-screen">
         {/* Left: Title */}
         <div
@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
                 to="https://withcabin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white underline"
+                className="text-heading underline"
               >
                 click here
               </Link>
@@ -127,7 +127,7 @@ const PrivacyPolicy = () => {
               let us know by sending an email to{' '}
               <Link
                 to="mailto:hello@designdeclares.com"
-                className="text-white underline"
+                className="text-heading underline"
               >
                 hello@designdeclares.com
               </Link>

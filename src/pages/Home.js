@@ -10,7 +10,7 @@ import GlobalSupporters from '../components/home/GlobalSupporters';
 
 const Home = () => {
   return (
-    <div className='bg-black text-white border-b border-black rounded-b-3xl'>
+    <div className='bg-black text-heading border-b border-black rounded-b-3xl'>
       <HeroSection />
       <Breakdown />
       <Donate />

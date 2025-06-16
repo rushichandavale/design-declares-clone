@@ -6,7 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'rgb(255, 99, 64)', // UK and progress bar color
+        primary:'rgb(255, 99, 64)', 
+        heading:'#E7E7E7',  
+        subtext :'#C4C4C4', 
+        'custom-gray': '#1F2937CC',  
       },
       
     },

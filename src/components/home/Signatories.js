@@ -130,7 +130,7 @@ const Signatories = () => {
   ];
 
   return (
-    <Element name="signatories" className="bg-black text-white py-2 lg:py-4">
+    <Element name="signatories" className="  py-2 lg:py-4">
       <div className="relative min-h-screen">
         <div className="px-2 md:px-4 lg:px-8 pt-8">
           {/* Counter, Title, Button */}
@@ -147,7 +147,7 @@ const Signatories = () => {
               <span className="text-[1.5rem] font-semibold">Signatories and counting in</span>
               <a
                 href="/uk" // Updated href to a meaningful route
-                className="inline-block px-3 py-1 text-[.75rem] font-normal bg-primary text-white rounded-full hover:bg-gray-800"
+                className="inline-block px-3 py-1 text-[.75rem] font-normal bg-primary text-heading rounded-full hover:bg-gray-800"
                 aria-label="View Design Declares UK"
               >
                 D! UK

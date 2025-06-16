@@ -80,7 +80,7 @@ const GlobalSupporters = () => {
   ];
 
   return (
-    <Element name="global-supporters" className="bg-black text-white py-2 lg:py-4">
+    <Element name="global-supporters" className="py-4 lg:py-8">
       <div className="relative min-h-screen">
         <div className="px-2 md:px-4 lg:px-8 pt-8">
           {/* Counter and Title */}

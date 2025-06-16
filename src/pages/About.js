@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="bg-black text-white border-b border-black rounded-b-3xl">
+    <div className="bg-black text-heading border-b border-black rounded-b-3xl">
       {/* Logo at Top Left */}
       <div className="top-4 left-4 z-30 p-4">
         <Link
