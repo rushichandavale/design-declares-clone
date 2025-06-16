@@ -33,7 +33,7 @@ function App() {
         ></div>
       </div>
       <Router>
-        <main className="relative z-10 pb-[29rem]">
+        <main className="relative z-10 lg:pb-[29rem] md:pb-[25rem] pb-[65rem]">
           <div className="App">
             <Routes>
               <Route path="/" element={<Home />} />
