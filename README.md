@@ -19,9 +19,6 @@ A modern web application promoting sustainable design principles. This project s
 - **Responsive Design**:
   - Optimized for mobile, tablet, and desktop devices.
   - Mobile-friendly navigation and footer interactions.
-- **Interactive Footer**:
-  - Fixed footer with newsletter signup and clickable social media links (Instagram, LinkedIn).
-  - Privacy Policy and Contact links for user engagement.
 - **Dynamic Routing**:
   - Supports multiple pages: Home, About, Contact, Privacy Policy, Latest, and 15 detail pages for updates.
   - Built with React Router for seamless navigation.
@@ -29,21 +26,16 @@ A modern web application promoting sustainable design principles. This project s
   - Visual indicator of scroll position for enhanced user experience.
 - **Low-Carbon Principles**:
   - Built with energy-efficient web development practices.
-  - Hosted using serverless computing for minimal energy consumption.
-- **Newsletter Signup**:
-  - Users can subscribe to the Design Declares newsletter with email input and opt-in checkbox.
 - **Contact Form**:
   - Users can send messages with fields for name, email, team, and enquiry type.
-- **Data Persistence**: LocalStorage for form data (if implemented in future updates).
 
 ## Tech Stack
 - **Frontend**: React.js, React Router, Tailwind CSS
 - **Animations**: Framer Motion for smooth transitions
-- **Storage**: LocalStorage (optional for form persistence)
 - **Libraries**:
   - react-scroll for smooth scrolling on Contact page
   - react-icons for UI (if used in components)
-- **Tools**: Vite (assumed for development), Netlify for deployment
+- **Tools**:Netlify for deployment
 
 ## Installation
 1. Clone the repository:
@@ -80,7 +72,6 @@ A modern web application promoting sustainable design principles. This project s
 
 ## Demo
 - Home page with scroll progress bar
-- Newsletter signup via footer
 - Contact form submission
 - Navigation across pages (Home, About, Contact, Latest, Privacy Policy)
 - Mobile responsiveness
