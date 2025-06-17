@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/88100f30-ff86-4457-95d3-0ce31fb2eca3/deploy-status)](https://app.netlify.com/projects/design-declares/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6da58e8d-ccd8-4de9-9d74-728e2de58e3b/deploy-status)](https://app.netlify.com/projects/design-declares/deploys)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
 # Design Declares Web App
