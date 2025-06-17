@@ -1,103 +1,113 @@
-Design Declares
-A modern, responsive web application built to promote sustainable design principles, featuring a newsletter, contact form, and detailed content pages.
 
+Design Declares Web App
+A modern web application promoting sustainable design principles. This project showcases a responsive React.js application with a newsletter signup, contact form, and low-carbon web development practices.
 Table of Contents
 
-About the Project
 Features
+Tech Stack
 Installation
 Usage
-Contributing
+Deployment
+Demo
+Screenshots
 License
-Contact
-
-About the Project
-Design Declares is a web platform dedicated to promoting sustainable design practices. It provides users with information about the initiative, a newsletter signup, a contact form, and detailed content pages showcasing design-related updates. Built with React and styled with Tailwind CSS, the project emphasizes low-carbon web development principles, hosted using serverless computing for energy efficiency.
-Why Design Declares?
-
-Raises awareness about sustainable design.
-Engages users through a newsletter and contact form.
-Showcases a modern, responsive UI with a focus on accessibility.
 
 Features
 
-Responsive Design: Optimized for desktop, tablet, and mobile devices.
-Interactive Footer: Fixed footer with clickable links and newsletter signup.
-Dynamic Routing: Supports multiple pages, including Home, About, Contact, Privacy Policy, and 15 detail pages.
-Scroll Progress Bar: Visual indicator of scroll position.
-Low-Carbon Principles: Built with energy-efficient web development practices.
+Responsive Design:
+Optimized for mobile, tablet, and desktop devices.
+Mobile-friendly navigation and footer interactions.
+
+
+Interactive Footer:
+Fixed footer with newsletter signup and clickable social media links (Instagram, LinkedIn).
+Privacy Policy and Contact links for user engagement.
+
+
+Dynamic Routing:
+Supports multiple pages: Home, About, Contact, Privacy Policy, Latest, and 15 detail pages for updates.
+Built with React Router for seamless navigation.
+
+
+Scroll Progress Bar:
+Visual indicator of scroll position for enhanced user experience.
+
+
+Low-Carbon Principles:
+Built with energy-efficient web development practices.
+Hosted using serverless computing for minimal energy consumption.
+
+
+Newsletter Signup:
+Users can subscribe to the Design Declares newsletter with email input and opt-in checkbox.
+
+
+Contact Form:
+Users can send messages with fields for name, email, team, and enquiry type.
+
+
+Data Persistence: LocalStorage for form data (if implemented in future updates).
+
+Tech Stack
+
+Frontend: React.js, React Router, Tailwind CSS
+Animations: Framer Motion for smooth transitions
+Storage: LocalStorage (optional for form persistence)
+Libraries:
+react-scroll for smooth scrolling on Contact page
+react-icons for UI (if used in components)
+
+
+Tools: Vite (assumed for development), Netlify for deployment
 
 Installation
-To set up the project locally, follow these steps:
 
-Clone the repository:
-git clone https://github.com/rushichandavale/design-declares-clone.git
+Clone the repository:git clone https://github.com/yourusername/design-declares.git
 cd design-declares
 
 
-Install dependencies:Ensure you have Node.js (v16 or higher) installed, then run:
-npm install
+Install dependencies:npm install
 
 
-Install Tailwind CSS (if not already configured):Follow the Tailwind CSS installation guide to set up Tailwind in your project.
-
-Install additional dependencies:The project uses react-router-dom for routing and framer-motion for animations. Install them with:
-npm install react-router-dom framer-motion
+Start the development server:npm start
 
 
+Open http://localhost:3000 in your browser.
 
 Usage
 
-Run the development server:
-npm start
-
-Open http://localhost:3000 in your browser to view the app.
-
-Navigate the app:
-
-Visit the Home page (/) for an overview of the initiative.
-Check the About page (/about) for details on the project’s mission.
+Navigate the Site:
+Visit the Home page (/) for an overview of the Design Declares initiative.
+Explore the About page (/about) for mission details.
 Use the Contact page (/contact) to send a message.
-Explore the Latest section (/latest) and detail pages (/latest/1 to /latest/15) for updates.
+Check the Latest section (/latest) and detail pages (/latest/1 to /latest/15) for updates.
 Review the Privacy Policy (/privacy-policy) for data handling information.
 
 
-Interact with the footer:
-
-Sign up for the newsletter.
+Interact with the Footer:
+Sign up for the newsletter with your email.
 Click links to Contact, Instagram, LinkedIn, or Privacy Policy.
 
 
-
-Contributing
-We welcome contributions to enhance Design Declares! To contribute:
-
-Fork the repository:Click the "Fork" button on GitHub and clone your fork:
-git clone https://github.com/yourusername/design-declares.git
+Test Responsiveness:
+Resize the browser or use a mobile device to verify the responsive design.
 
 
-Create a branch:
-git checkout -b feature/your-feature-name
 
+Deployment
 
-Make changes:Ensure your code follows the project’s coding standards (e.g., ESLint, Prettier if configured).
+Live Demo: https://design-declares.netlify.app/ (replace with your actual URL)
+Deployed on Netlify with continuous integration from GitHub.
 
-Commit and push:
-git add .
-git commit -m "Add your feature description"
-git push origin feature/your-feature-name
+Demo
 
+Home page with scroll progress bar
+Newsletter signup via footer
+Contact form submission
+Navigation across pages (Home, About, Contact, Latest, Privacy Policy)
+Mobile responsiveness
 
-Open a pull request:Submit a pull request on GitHub with a clear description of your changes.
-
-
+Screenshots
+(Coming soon! Add screenshots of key pages like Home, Contact, and Footer.)
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-Contact
-
-Email: Use the Contact page to send a message.
-Social Media: Follow us on Instagram or LinkedIn.
-Project Link: https://design-declares.netlify.app/
-
-
-Empowered by Driftime®.
+MIT License. See LICENSE for details.
