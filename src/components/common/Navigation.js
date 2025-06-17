@@ -19,7 +19,7 @@ const Navigation = () => {
   };
 
   const menuVariants = {
-    closed: { width: 250 }, // Default width for desktop (sm and above)
+    closed: { width: 250 },  
     open: {
       width: 350,
       transition: { duration: 0.3, ease: 'easeInOut' },
@@ -27,7 +27,7 @@ const Navigation = () => {
   };
 
   const mobileMenuVariants = {
-    closed: { width: '100%' }, // Full width for mobile
+    closed: { width: '100%' },  
     open: { width: '100%', transition: { duration: 0.3, ease: 'easeInOut' } },
   };
 
@@ -75,7 +75,7 @@ const Navigation = () => {
     <>
       <motion.nav
         className="fixed bottom-0  sm:bottom-4 sm:right-4 bg-heading text-black border border-black shadow-lg z-40 w-full sm:w-auto"
-        variants={window.innerWidth < 640 ? mobileMenuVariants : menuVariants} // Use mobile variants for xs, desktop for sm+
+        variants={window.innerWidth < 640 ? mobileMenuVariants : menuVariants}  
         initial="closed"
         animate={isOpen ? 'open' : 'closed'}
         onAnimationComplete={() => {
@@ -185,8 +185,7 @@ const Navigation = () => {
                     <XMarkIcon className="h-8 w-8" />
                   </button>
                 </div>
-
-                {/* Content: 40%/60% Split */}
+ 
                 <div className="flex-1 lg:grid lg:grid-cols-[40%_60%] p-8">
                   {/* Left: Select Global Chapter */}
                   <div className="flex">

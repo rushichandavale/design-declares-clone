@@ -9,7 +9,6 @@ const GlobalPartnerships = () => {
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
-  // Scroll-triggered animation for the right-side content div
   const contentRef = useRef(null);
   const contentIsInView = useInView(contentRef, { once: true, margin: '0px 0px -100px 0px' });
   const contentControls = useAnimation();
@@ -66,7 +65,7 @@ const GlobalPartnerships = () => {
                     and you’re ready to do the work. Because there is no design on a dead planet.
                   </p>
                   <Link
-                    to="#"
+                    to="/contact" 
                     className="inline-block bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 md:w-auto text-center"
                   >
                     Get in Touch

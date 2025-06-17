@@ -8,13 +8,11 @@ const DeclareNow = () => {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
-
-  // Scroll-triggered animation for the paragraph
+ 
   const paragraphRef = useRef(null);
   const paragraphIsInView = useInView(paragraphRef, { once: true, margin: '0px 0px -100px 0px' });
   const paragraphControls = useAnimation();
-
-  // Scroll-triggered animation for the main div below the paragraph
+ 
   const formDivRef = useRef(null);
   const formDivIsInView = useInView(formDivRef, { once: true, margin: '0px 0px -100px 0px' });
   const formDivControls = useAnimation();

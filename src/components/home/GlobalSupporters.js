@@ -14,28 +14,24 @@ const GlobalSupporters = () => {
   const containerVariants = {
     animate: { transition: { staggerChildren: 0.1 } },
   };
-
-  // Counter animation state
+ 
   const targetCount = 661;
   const [count, setCount] = useState(0);
-
-  // Scroll-triggered animation for the counter section
+ 
   const counterRef = useRef(null);
   const counterIsInView = useInView(counterRef, {
     once: true,
     margin: "0px 0px -100px 0px",
   });
   const counterControls = useAnimation();
-
-  // Scroll-triggered animation for the supporters list
+ 
   const listRef = useRef(null);
   const listIsInView = useInView(listRef, {
     once: true,
     margin: "0px 0px -100px 0px",
   });
   const listControls = useAnimation();
-
-  // Animate counter from 0 to 661
+ 
   useEffect(() => {
     if (counterIsInView) {
       counterControls.start("animate");
@@ -45,15 +41,13 @@ const GlobalSupporters = () => {
       });
     }
   }, [counterIsInView, counterControls, targetCount]);
-
-  // Animate supporters list
+ 
   useEffect(() => {
     if (listIsInView) {
       listControls.start("animate");
     }
   }, [listIsInView, listControls]);
-
-  // Global Supporters list
+ 
   const supporters = [
     "Argentina",
     "Celina Hilbert",
@@ -739,12 +733,11 @@ const GlobalSupporters = () => {
     "Vietnam",
     "Dr Britta Boyer",
   ];
-
-  // Distribute supporters into columns (column-wise distribution)
+ 
   const distributeIntoColumns = (items, numColumns) => {
     const columns = Array.from({ length: numColumns }, () => []);
     items.forEach((item, index) => {
-      const columnIndex = index % numColumns; // Distribute vertically (column-wise)
+      const columnIndex = index % numColumns;  
       columns[columnIndex].push(item);
     });
     return columns;
@@ -803,12 +796,15 @@ const GlobalSupporters = () => {
                 variants={fadeUp}
               >
                 {column.map((supporter, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {supporter}
-                  </span>
+                  </a>
                 ))}
               </div>
             ))}
@@ -823,12 +819,15 @@ const GlobalSupporters = () => {
                 variants={fadeUp}
               >
                 {column.map((supporter, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {supporter}
-                  </span>
+                  </a>
                 ))}
               </div>
             ))}
@@ -843,12 +842,15 @@ const GlobalSupporters = () => {
                 variants={fadeUp}
               >
                 {column.map((supporter, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {supporter}
-                  </span>
+                  </a>
                 ))}
               </div>
             ))}
@@ -863,12 +865,15 @@ const GlobalSupporters = () => {
                 variants={fadeUp}
               >
                 {column.map((supporter, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {supporter}
-                  </span>
+                  </a>
                 ))}
               </div>
             ))}

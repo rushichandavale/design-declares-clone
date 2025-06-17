@@ -12,7 +12,6 @@ const SteeringGroup = () => {
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
-  // Scroll-triggered animation for the right-side content div
   const contentRef = useRef(null);
   const contentIsInView = useInView(contentRef, { once: true, margin: '0px 0px -100px 0px' });
   const contentControls = useAnimation();

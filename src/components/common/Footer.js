@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    // <footer className="bg-primary text-black py-12 px-2 md:px-4 lg:px-10">
-    <footer className="fixed bottom-0 left-0 w-full bg-primary text-black py-24 px-4 md:px-8 lg:px-16 z-0">
+    
+    <footer className="lg:fixed bottom-0 left-0 w-full bg-primary text-black py-24 px-4 md:px-8 lg:px-16 z-0">
       {/* Three-Column Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* First Part: Design Declares */}
         <div className="flex flex-col">
-          <h2 className="text-[5rem] title-font leading-none font-bold tracking-tight">
+          <h2 className="text-[3rem] lg:text-[5rem] title-font leading-none font-bold tracking-tight">
             DESIGN
             <br />
             DECLARES

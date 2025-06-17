@@ -44,25 +44,27 @@ const Contact = () => {
             <div
               className="w-full lg:w-[30%] px-2 md:px-4 lg:px-8 pt-8 lg:sticky lg:top-0 z-20 transition-all duration-200 will-change-[position,top]"
             >
-              <motion.h2 className="text-[1.5rem] font-semibold" variants={fadeUp}>
+              <motion.h2 className="text-[1.5rem] font-semibold text-heading" variants={fadeUp}>
                 Contact
               </motion.h2>
             </div>
 
             {/* Right: Form */}
-            <div className="w-full px-2 md:px-4 lg:px-8 pt-8 border border-white p-4 lg:p-8">
+            <motion.div className="w-full px-2 md:px-4 lg:px-8 pt-8 border border-white p-4 lg:p-8"  variants={fadeUp}
+                initial="initial"
+                animate="animate">
               <motion.div
-                className="flex flex-col space-y-8"
+                className="flex flex-col space-y-8" 
                 variants={containerVariants}
                 initial="initial"
                 animate="animate"
               >
-                <motion.h3 className="text-[3.5rem] font-normal" variants={fadeUp}>
+                <h3 className="text-[3.5rem] font-normal text-heading" >
                   Send Us a Message
-                </motion.h3>
-                <motion.div className="border border-white" variants={containerVariants}>
+                </h3>
+                <div className="border border-white" variants={containerVariants}>
                   <div className="flex items-center border-b border-white">
-                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0">
+                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0 text-subtext">
                       Name:*
                     </label>
                     <input
@@ -72,7 +74,7 @@ const Contact = () => {
                     />
                   </div>
                   <div className="flex items-center border-b border-white">
-                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0">
+                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0 text-subtext">
                       Email:*
                     </label>
                     <input
@@ -82,7 +84,7 @@ const Contact = () => {
                     />
                   </div>
                   <div className="flex items-center border-b border-white">
-                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0">
+                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0 text-subtext">
                       Team to contact:*
                     </label>
                     <select
@@ -97,7 +99,7 @@ const Contact = () => {
                     </select>
                   </div>
                   <div className="flex items-center border-b border-white">
-                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0">
+                    <label className="text-[1.125rem] font-normal px-6 py-3 w-40 shrink-0 text-subtext">
                       Enquiry type:*
                     </label>
                     <select
@@ -118,28 +120,28 @@ const Contact = () => {
                       rows="6"
                     ></textarea>
                   </div>
-                </motion.div>
-                <motion.div className="flex flex-col space-y-4" variants={fadeUp}>
+                </div>
+                <div className="flex flex-col space-y-4" variants={fadeUp}>
                   <label className="flex items-center">
                     <input
                       type="checkbox"
                       className="appearance-none min-w-12 min-h-12 w-12 h-12 mr-4 border-2 border-white bg-transparent flex-shrink-0 checked:bg-transparent checked:border-white checked:after:content-['✓'] checked:after:text-white checked:after:text-2xl checked:after:flex checked:after:items-center checked:after:justify-center checked:after:h-full"
                     />
-                    <span className="text-[.75rem] font-normal leading-tight">
+                    <span className="text-[.75rem] font-normal leading-tight text-subtext">
                       I would like to be added to the Design Declares! newsletter and receive further updates.
                     </span>
                   </label>
-                  <Link to="/privacy-policy" className="text-[.75rem] text-white underline">
+                  <Link to="/privacy-policy" className="text-[.75rem] text-heading underline">
                     View our Privacy Policy
                   </Link>
-                </motion.div>
-                <motion.div variants={fadeUp}>
+                </div>
+                <div variants={fadeUp}>
                   <button className="bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 transition-colors">
                     Send Message
                   </button>
-                </motion.div>
+                </div>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </Element>

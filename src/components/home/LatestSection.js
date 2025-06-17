@@ -8,34 +8,29 @@ const LatestSection = () => {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
-
-  // Stagger animation for child elements
+ 
   const containerVariants = {
     initial: { opacity: 0 },
     animate: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Stagger each child by 0.1 seconds
+        staggerChildren: 0.1,  
       },
     },
   };
-
-  // Scroll-triggered animation for the main content div
+ 
   const contentRef = useRef(null);
   const contentIsInView = useInView(contentRef, { once: true, margin: '0px 0px -100px 0px' });
   const contentControls = useAnimation();
 
-  // Scroll-triggered animation for the first event card
   const card1Ref = useRef(null);
   const card1IsInView = useInView(card1Ref, { once: true, margin: '0px 0px -100px 0px' });
   const card1Controls = useAnimation();
 
-  // Scroll-triggered animation for the second event card
   const card2Ref = useRef(null);
   const card2IsInView = useInView(card2Ref, { once: true, margin: '0px 0px -100px 0px' });
   const card2Controls = useAnimation();
 
-  // Scroll-triggered animation for the button
   const buttonRef = useRef(null);
   const buttonIsInView = useInView(buttonRef, { once: true, margin: '0px 0px -100px 0px' });
   const buttonControls = useAnimation();

@@ -18,7 +18,6 @@ import latest13 from '../assets/images/latest13.webp';
 import latest14 from '../assets/images/latest14.webp';
 import latest15 from '../assets/images/latest15.webp';
 
-// Section Component to handle each section with scroll-triggered animation
 const Section = ({ section, index }) => {
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
@@ -28,7 +27,6 @@ const Section = ({ section, index }) => {
     animate: { transition: { staggerChildren: 0.1 } },
   };
 
-  // Hooks are at the top level of the Section component
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '0px 0px -100px 0px' });
   const controls = useAnimation();
@@ -40,59 +38,61 @@ const Section = ({ section, index }) => {
   }, [isInView, controls]);
 
   return (
-    <motion.div
-      ref={ref}
-      className="flex flex-col lg:flex-row gap-4" // Reduced gap from 8 to 4
-      variants={containerVariants}
-      initial="initial"
-      animate={controls}
-    >
-      <motion.div className="flex-1" variants={fadeUp}>
-        <img
-          src={section.image}
-          alt={section.alt}
-          className="w-96 h-96 object-cover"
-        />
-      </motion.div>
+    <Link to={`/latest/${section.id}`} className="block">
       <motion.div
-        className="flex-1 flex flex-col space-y-2"
+        ref={ref}
+        className="flex flex-col lg:flex-row gap-4"
         variants={containerVariants}
+        initial="initial"
+        animate={controls}
       >
-        <motion.div className="flex items-center space-x-2" variants={fadeUp}>
-          {[section.category, section.chapter].map((tag) => (
-            <motion.span
-              key={tag}
-              className="inline-block px-3 py-1 text-[.75rem] font-semibold bg-gray-800/80 text-subtext rounded-full"
-              variants={fadeUp}
-            >
-              {tag}
-            </motion.span>
-          ))}
-          {section.date && (
-            <motion.span
+        <motion.div className="flex-1" variants={fadeUp}>
+          <img
+            src={section.image}
+            alt={section.alt}
+            className="w-96 h-96 object-cover"
+          />
+        </motion.div>
+        <motion.div
+          className="flex-1 flex flex-col space-y-2"
+          variants={containerVariants}
+        >
+          <motion.div className="flex items-center space-x-2" variants={fadeUp}>
+            {[section.category, section.chapter].map((tag) => (
+              <motion.span
+                key={tag}
+                className="inline-block px-3 py-1 text-[.75rem] font-semibold bg-gray-800/80 text-subtext rounded-full"
+                variants={fadeUp}
+              >
+                {tag}
+              </motion.span>
+            ))}
+            {section.date && (
+              <motion.span
+                className="text-[.75rem] font-semibold text-subtext"
+                variants={fadeUp}
+              >
+                {section.date}
+              </motion.span>
+            )}
+          </motion.div>
+          <motion.h2
+            className="text-[1.5rem] lg:text-[2rem] font-normal text-heading"
+            variants={fadeUp}
+          >
+            {section.title}
+          </motion.h2>
+          {section.description && (
+            <motion.p
               className="text-[.75rem] font-semibold text-subtext"
               variants={fadeUp}
             >
-              {section.date}
-            </motion.span>
+              {section.description}
+            </motion.p>
           )}
         </motion.div>
-        <motion.h2
-          className="text-[1.5rem] lg:text-[2rem] font-normal text-heading"
-          variants={fadeUp}
-        >
-          {section.title}
-        </motion.h2>
-        {section.description && (
-          <motion.p
-            className="text-[.75rem] font-semibold text-subtext"
-            variants={fadeUp}
-          >
-            {section.description}
-          </motion.p>
-        )}
       </motion.div>
-    </motion.div>
+    </Link>
   );
 };
 
@@ -105,11 +105,9 @@ const Latest = () => {
     animate: { transition: { staggerChildren: 0.1 } },
   };
 
-  // State for selected category and chapter
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedChapter, setSelectedChapter] = useState('All');
 
-  // Scroll-triggered animation for the right-side content div
   const contentRef = useRef(null);
   const contentIsInView = useInView(contentRef, { once: true, margin: '0px 0px -100px 0px' });
   const contentControls = useAnimation();
@@ -120,9 +118,9 @@ const Latest = () => {
     }
   }, [contentIsInView, contentControls]);
 
-  // Array of sections
   const sections = [
     {
+      id: 1,
       category: 'Case Studies',
       chapter: 'D! Ireland',
       image: latest1,
@@ -133,6 +131,7 @@ const Latest = () => {
         'Outlining the journey of how the Design Declares initiative was integrated into the National College of Art and Design’s curriculum for BA Graphic Design students.',
     },
     {
+      id: 2,
       category: 'Events',
       chapter: 'D! UK',
       image: latest2,
@@ -142,6 +141,7 @@ const Latest = () => {
       description: 'Recap: SD4P Collective working session – 28th March 2025',
     },
     {
+      id: 3,
       category: 'Perspective',
       chapter: 'D! Australia',
       image: latest3,
@@ -152,6 +152,7 @@ const Latest = () => {
         'An Interview with Koskela Founder and Design Declares Australia Board Member - Sasha Titchkosky',
     },
     {
+      id: 4,
       category: 'Perspective',
       chapter: 'D! Australia',
       image: latest4,
@@ -161,6 +162,7 @@ const Latest = () => {
       description: 'An Interview with Vert Design and Design Declares Australia CEO - Andew Simpson',
     },
     {
+      id: 5,
       category: 'Events',
       chapter: 'D! UK',
       image: latest5,
@@ -171,6 +173,7 @@ const Latest = () => {
         "Design Declares' November Event Challenges Perspectives on Sustainability and Innovation",
     },
     {
+      id: 6,
       category: 'Events',
       chapter: 'D! UK',
       image: latest6,
@@ -181,6 +184,7 @@ const Latest = () => {
         'Design Declares has always been about people. From the moment that Design Council CDO Cat Drew introduced Alexie Sommer and Jo Barnard back in 2022, followed by Abb-d Taiyo and Aurelie Lionet coming onboard and aligning to the vision, we knew Design Declares was something special.',
     },
     {
+      id: 7,
       category: 'Case Studies',
       chapter: 'D! UK',
       image: latest7,
@@ -191,6 +195,7 @@ const Latest = () => {
         'In an industry first, MEK have documented exactly how they approached and solved this challenge so they can inspire others to do the same and help businesses transition to sustainable digital practices.',
     },
     {
+      id: 8,
       category: 'Case Studies',
       chapter: 'D! UK',
       image: latest8,
@@ -201,6 +206,7 @@ const Latest = () => {
         'A showcase of 8 projects exploring greenwashing, air quality, environmental effects on wellbeing, plastic, the ecological impacts of data harvesting, trees, global dimming, and green spaces, collected together for the first time in a thoughtfully designed limited-edition book.',
     },
     {
+      id: 9,
       category: 'Updates',
       chapter: 'D! UK',
       image: latest9,
@@ -211,6 +217,7 @@ const Latest = () => {
         'Design Declares has become a certified CIC, a people-powered Community Interest Company with planet-led ambitions.',
     },
     {
+      id: 10,
       category: 'Case Studies',
       chapter: 'D! UK',
       image: latest10,
@@ -221,6 +228,7 @@ const Latest = () => {
         'Climify podcast is to connect climate scientists and design educators together so that we can bring climate-related projects into our classrooms.',
     },
     {
+      id: 11,
       category: 'Case Studies',
       chapter: 'D! UK',
       image: latest11,
@@ -231,6 +239,7 @@ const Latest = () => {
         'Making its global debut at Clerkenwell Design Week, Revo is a stunning new design by Pearson Lloyd, for Profim, combining circular thinking with playful design to create a lightweight and versatile workplace furniture system.',
     },
     {
+      id: 12,
       category: 'Case Studies',
       chapter: 'D! UK',
       image: latest12,
@@ -241,6 +250,7 @@ const Latest = () => {
         'Only One invite people to make monthly donations to plant ocean trees and coral reefs, remove carbon and plastics from our seas, and track the results.',
     },
     {
+      id: 13,
       category: 'Updates',
       chapter: 'D! UK',
       image: latest13,
@@ -251,6 +261,7 @@ const Latest = () => {
         'A few months ago, an article by Chris Hockell was published in Dezeen criticising Architects Declare for failing to live up to its ambitions.',
     },
     {
+      id: 14,
       category: 'Perspective',
       chapter: 'D! UK',
       image: latest14,
@@ -261,6 +272,7 @@ const Latest = () => {
         'Two big barriers for any business setting out to reduce their impact on the planet are knowing where they are starting from and understanding what they should be aiming for.',
     },
     {
+      id: 15,
       category: 'Events',
       chapter: 'D! Australia',
       image: latest15,
@@ -271,7 +283,6 @@ const Latest = () => {
     },
   ];
 
-  // Filter sections based on selected category and chapter
   const filteredSections = sections.filter((section) => {
     const matchesCategory =
       selectedCategory === 'All' || section.category === selectedCategory;
@@ -389,7 +400,7 @@ const Latest = () => {
             >
               <div className="flex flex-col space-y-8">
                 {filteredSections.map((section, index) => (
-                  <Section key={index} section={section} index={index} />
+                  <Section key={section.id} section={section} index={index} />
                 ))}
               </div>
             </motion.div>

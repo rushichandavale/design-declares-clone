@@ -12,21 +12,17 @@ const Signatories = () => {
     animate: { transition: { staggerChildren: 0.1 } },
   };
 
-  // Counter animation state
   const targetCount = 513;
   const [count, setCount] = useState(0);
 
-  // Scroll-triggered animation for the counter section
   const counterRef = useRef(null);
   const counterIsInView = useInView(counterRef, { once: true, margin: '0px 0px -100px 0px' });
   const counterControls = useAnimation();
 
-  // Scroll-triggered animation for the signatories list
   const listRef = useRef(null);
   const listIsInView = useInView(listRef, { once: true, margin: '0px 0px -100px 0px' });
   const listControls = useAnimation();
 
-  // Animate counter from 0 to 513
   useEffect(() => {
     if (counterIsInView) {
       counterControls.start('animate');
@@ -37,14 +33,12 @@ const Signatories = () => {
     }
   }, [counterIsInView, counterControls, targetCount]);
 
-  // Animate signatories list
   useEffect(() => {
     if (listIsInView) {
       listControls.start('animate');
     }
   }, [listIsInView, listControls]);
 
-  // Signatories list
   const signatories = [
     '21–87', '216 Signs', '31% Wool', '400', 'A–Side.', 'Aalia Ahamed', 'Abbie Williams', 'abc',
     'ACRE – A Creative Endeavour Ltd', 'Active Matter', 'ACX', 'Adele Kelly', 'AdesignStorie',
@@ -154,7 +148,7 @@ const Signatories = () => {
   const distributeIntoColumns = (items, numColumns) => {
     const columns = Array.from({ length: numColumns }, () => []);
     items.forEach((item, index) => {
-      const columnIndex = index % numColumns; // Distribute vertically (column-wise)
+      const columnIndex = index % numColumns; 
       columns[columnIndex].push(item);
     });
     return columns;
@@ -215,12 +209,16 @@ const Signatories = () => {
                 variants={fadeUp}
               >
                 {column.map((signatory, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {signatory}
-                  </span>
+                  </a>
+
                 ))}
               </div>
             ))}
@@ -235,12 +233,16 @@ const Signatories = () => {
                 variants={fadeUp}
               >
                 {column.map((signatory, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {signatory}
-                  </span>
+                  </a>
+
                 ))}
               </div>
             ))}
@@ -255,12 +257,16 @@ const Signatories = () => {
                 variants={fadeUp}
               >
                 {column.map((signatory, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {signatory}
-                  </span>
+                  </a>
+
                 ))}
               </div>
             ))}
@@ -275,12 +281,16 @@ const Signatories = () => {
                 variants={fadeUp}
               >
                 {column.map((signatory, index) => (
-                  <span
+                  <a
                     key={index}
-                    className="text-[.75rem] font-normal text-subtext"
+                    href="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[.75rem] font-normal text-subtext hover:underline"
                   >
                     {signatory}
-                  </span>
+                  </a>
+
                 ))}
               </div>
             ))}

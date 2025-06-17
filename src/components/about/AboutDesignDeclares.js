@@ -9,7 +9,6 @@ const AboutDesignDeclares = () => {
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
-  // Scroll-triggered animation for the right-side content div
   const contentRef = useRef(null);
   const contentIsInView = useInView(contentRef, { once: true, margin: '0px 0px -100px 0px' });
   const contentControls = useAnimation();
@@ -47,7 +46,7 @@ const AboutDesignDeclares = () => {
             animate={contentControls}
           >
             <div className="flex flex-col space-y-8">
-              {/* Paragraphs */}
+               
               <p className="text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] font-normal leading-tight text-heading">
                 Climate breakdown has begun. And business as usual is not an option.
               </p>
@@ -59,18 +58,18 @@ const AboutDesignDeclares = () => {
                 we’re an industry-recognised initiative representing the fears, hopes and commitment to
                 action of a growing group of designers, design studios, agencies and institutions.
               </p>
-
-              {/* Button */}
+ 
               <div>
                 <Link
-                  to="#"
+                  to="https://designdeclares.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full w-full md:w-auto text-center"
                 >
                   See Global Declarations
                 </Link>
               </div>
 
-              {/* Side-by-Side Paragraphs */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col space-y-8">
                   <p className="text-[1rem] lg:text-[1.125rem] font-normal text-subtext">
@@ -79,7 +78,9 @@ const AboutDesignDeclares = () => {
                     everything that’s come before.
                   </p>
                   <Link
-                    to="#"
+                    to="https://designdeclares.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block bg-heading text-black px-6 py-3 text-[1.25rem] font-semibold rounded-full hover:bg-gray-200 md:w-auto text-center"
                   >
                     Declare Emergency Now
@@ -96,7 +97,6 @@ const AboutDesignDeclares = () => {
                 </div>
               </div>
 
-              {/* Side-by-Side Unordered Lists */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <ul className="list-disc pl-5 text-[1rem] lg:text-[1.125rem] font-normal space-y-4 text-subtext">
                   <li>Design Declares is free.</li>

@@ -8,12 +8,11 @@ const Donate = () => {
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
-  // Scroll-triggered animation for the paragraph
+  
   const paragraphRef = useRef(null);
   const paragraphIsInView = useInView(paragraphRef, { once: true, margin: '0px 0px -100px 0px' });
   const paragraphControls = useAnimation();
-
-  // Scroll-triggered animation for the button group
+ 
   const buttonsRef = useRef(null);
   const buttonsIsInView = useInView(buttonsRef, { once: true, margin: '0px 0px -100px 0px' });
   const buttonsControls = useAnimation();

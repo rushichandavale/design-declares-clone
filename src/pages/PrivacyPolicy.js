@@ -4,13 +4,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
-  // State for title fixed state
   const [isTitleFixed, setIsTitleFixed] = useState(false);
 
-  // Ref for the component container
   const sectionRef = useRef(null);
 
-  // Handle scroll to toggle fixed title
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
@@ -19,7 +16,6 @@ const PrivacyPolicy = () => {
         const isPastBottom = rect.bottom <= 0;
         const isAboveTop = rect.top > window.innerHeight;
 
-        // Fix title when component is at top but not past bottom or above top
         setIsTitleFixed(isAtTop && !isPastBottom && !isAboveTop);
       }
     };
@@ -28,13 +24,11 @@ const PrivacyPolicy = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Animation variants for fade-up
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
-  // Staggered animation for content elements
   const containerVariants = {
     animate: {
       transition: {

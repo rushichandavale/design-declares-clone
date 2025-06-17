@@ -6,17 +6,11 @@ const ActsOfEmergency = () => {
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-  };
-  const containerVariants = {
-    animate: { transition: { staggerChildren: 0.1 } },
-  };
-
-  // Scroll-triggered animation for the intro paragraph
+  }; 
   const paragraphRef = useRef(null);
   const paragraphIsInView = useInView(paragraphRef, { once: true, margin: '0px 0px -100px 0px' });
   const paragraphControls = useAnimation();
 
-  // Scroll-triggered animation for the list of acts
   const actsRef = useRef(null);
   const actsIsInView = useInView(actsRef, { once: true, margin: '0px 0px -100px 0px' });
   const actsControls = useAnimation();
@@ -66,7 +60,7 @@ const ActsOfEmergency = () => {
               <motion.div
                 ref={actsRef}
                 className="space-y-0"
-                variants={containerVariants}
+                variants={fadeUp}
                 initial="initial"
                 animate={actsControls}
               >

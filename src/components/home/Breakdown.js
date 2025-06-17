@@ -1,14 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { Element } from 'react-scroll';
 import { motion, useInView, useAnimation, AnimatePresence } from 'framer-motion';
-
-// Component for each collapsible section
+ 
 const CollapsibleSection = ({ title, children, isOpen, toggleSection }) => {
   const fadeUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-  };
-  // Animation for the collapsible content when toggled
+  }; 
   const toggleAnimation = {
     hidden: { opacity: 0, height: 0, transition: { duration: 0.3, ease: 'easeOut' } },
     visible: {
@@ -17,13 +15,11 @@ const CollapsibleSection = ({ title, children, isOpen, toggleSection }) => {
       transition: { duration: 0.3, ease: 'easeOut' }
     }
   };
-
-  // Scroll-triggered animation for the section header
+ 
   const headerRef = useRef(null);
   const headerIsInView = useInView(headerRef, { once: true, margin: '0px 0px -100px 0px' });
   const headerControls = useAnimation();
-
-  // Scroll-triggered animation for the collapsible content
+ 
   const contentRef = useRef(null);
   const contentIsInView = useInView(contentRef, { once: true, margin: '0px 0px -100px 0px' });
   const contentControls = useAnimation();
@@ -126,13 +122,11 @@ const Breakdown = () => {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
-
-  // Scroll-triggered animation for the intro paragraph
+ 
   const introRef = useRef(null);
   const introIsInView = useInView(introRef, { once: true, margin: '0px 0px -100px 0px' });
   const introControls = useAnimation();
-
-  // Scroll-triggered animation for the button
+ 
   const buttonRef = useRef(null);
   const buttonIsInView = useInView(buttonRef, { once: true, margin: '0px 0px -100px 0px' });
   const buttonControls = useAnimation();

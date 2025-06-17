@@ -14,7 +14,6 @@ const DesignersBehind = () => {
     animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
   };
 
-  // Scroll-triggered animation for the right-side content div
   const contentRef = useRef(null);
   const contentIsInView = useInView(contentRef, { once: true, margin: '0px 0px -100px 0px' });
   const contentControls = useAnimation();
@@ -60,7 +59,6 @@ const DesignersBehind = () => {
                 change things.
               </p>
 
-              {/* Side-by-Side Images */}
               <div className="grid grid-cols-2 gap-8 md:gap-20">
                 <div className="flex flex-col space-y-8 md:space-y-24">
                   <img
