@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/88100f30-ff86-4457-95d3-0ce31fb2eca3/deploy-status)](https://app.netlify.com/projects/design-declares/deploys)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
 # Design Declares Web App
 
 A modern web application promoting sustainable design principles. This project showcases a responsive React.js application with a newsletter signup, contact form, and low-carbon web development practices.
@@ -45,7 +48,7 @@ A modern web application promoting sustainable design principles. This project s
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/design-declares.git
+   git clone https://github.com/rushichandavale/design-declares-clone.git
    cd design-declares
    ```
 2. Install dependencies:
@@ -72,7 +75,7 @@ A modern web application promoting sustainable design principles. This project s
    - Resize the browser or use a mobile device to verify the responsive design.
 
 ## Deployment
-- **Live Demo**: https://design-declares.netlify.app/ (replace with your actual URL)
+- **Live Demo**: https://design-declares.netlify.app/ 
 - Deployed on Netlify with continuous integration from GitHub.
 
 ## Demo
@@ -82,8 +85,6 @@ A modern web application promoting sustainable design principles. This project s
 - Navigation across pages (Home, About, Contact, Latest, Privacy Policy)
 - Mobile responsiveness
 
-## Screenshots
-(Coming soon! Add screenshots of key pages like Home, Contact, and Footer.)
 
 ## License
 MIT License. See [LICENSE](LICENSE) for details.
