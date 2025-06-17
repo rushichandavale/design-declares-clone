@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+Design Declares
+A modern, responsive web application built to promote sustainable design principles, featuring a newsletter, contact form, and detailed content pages.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
 
-## Available Scripts
+About the Project
+Features
+Installation
+Usage
+Contributing
+License
+Contact
 
-In the project directory, you can run:
+About the Project
+Design Declares is a web platform dedicated to promoting sustainable design practices. It provides users with information about the initiative, a newsletter signup, a contact form, and detailed content pages showcasing design-related updates. Built with React and styled with Tailwind CSS, the project emphasizes low-carbon web development principles, hosted using serverless computing for energy efficiency.
+Why Design Declares?
 
-### `npm start`
+Raises awareness about sustainable design.
+Engages users through a newsletter and contact form.
+Showcases a modern, responsive UI with a focus on accessibility.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Responsive Design: Optimized for desktop, tablet, and mobile devices.
+Interactive Footer: Fixed footer with clickable links and newsletter signup.
+Dynamic Routing: Supports multiple pages, including Home, About, Contact, Privacy Policy, and 15 detail pages.
+Scroll Progress Bar: Visual indicator of scroll position.
+Low-Carbon Principles: Built with energy-efficient web development practices.
 
-### `npm test`
+Installation
+To set up the project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repository:
+git clone https://github.com/rushichandavale/design-declares-clone.git
+cd design-declares
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies:Ensure you have Node.js (v16 or higher) installed, then run:
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install Tailwind CSS (if not already configured):Follow the Tailwind CSS installation guide to set up Tailwind in your project.
 
-### `npm run eject`
+Install additional dependencies:The project uses react-router-dom for routing and framer-motion for animations. Install them with:
+npm install react-router-dom framer-motion
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run the development server:
+npm start
 
-## Learn More
+Open http://localhost:3000 in your browser to view the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate the app:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Visit the Home page (/) for an overview of the initiative.
+Check the About page (/about) for details on the project’s mission.
+Use the Contact page (/contact) to send a message.
+Explore the Latest section (/latest) and detail pages (/latest/1 to /latest/15) for updates.
+Review the Privacy Policy (/privacy-policy) for data handling information.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Interact with the footer:
 
-### Analyzing the Bundle Size
+Sign up for the newsletter.
+Click links to Contact, Instagram, LinkedIn, or Privacy Policy.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributing
+We welcome contributions to enhance Design Declares! To contribute:
 
-### Advanced Configuration
+Fork the repository:Click the "Fork" button on GitHub and clone your fork:
+git clone https://github.com/yourusername/design-declares.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Create a branch:
+git checkout -b feature/your-feature-name
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Make changes:Ensure your code follows the project’s coding standards (e.g., ESLint, Prettier if configured).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Commit and push:
+git add .
+git commit -m "Add your feature description"
+git push origin feature/your-feature-name
+
+
+Open a pull request:Submit a pull request on GitHub with a clear description of your changes.
+
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+Contact
+
+Email: Use the Contact page to send a message.
+Social Media: Follow us on Instagram or LinkedIn.
+Project Link: https://design-declares.netlify.app/
+
+
+Empowered by Driftime®.
