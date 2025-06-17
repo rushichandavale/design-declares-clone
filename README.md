@@ -1,113 +1,89 @@
+# Design Declares Web App
 
-Design Declares Web App
 A modern web application promoting sustainable design principles. This project showcases a responsive React.js application with a newsletter signup, contact form, and low-carbon web development practices.
-Table of Contents
 
-Features
-Tech Stack
-Installation
-Usage
-Deployment
-Demo
-Screenshots
-License
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Demo](#demo)
+- [Screenshots](#screenshots)
+- [License](#license)
 
-Features
+## Features
+- **Responsive Design**:
+  - Optimized for mobile, tablet, and desktop devices.
+  - Mobile-friendly navigation and footer interactions.
+- **Interactive Footer**:
+  - Fixed footer with newsletter signup and clickable social media links (Instagram, LinkedIn).
+  - Privacy Policy and Contact links for user engagement.
+- **Dynamic Routing**:
+  - Supports multiple pages: Home, About, Contact, Privacy Policy, Latest, and 15 detail pages for updates.
+  - Built with React Router for seamless navigation.
+- **Scroll Progress Bar**:
+  - Visual indicator of scroll position for enhanced user experience.
+- **Low-Carbon Principles**:
+  - Built with energy-efficient web development practices.
+  - Hosted using serverless computing for minimal energy consumption.
+- **Newsletter Signup**:
+  - Users can subscribe to the Design Declares newsletter with email input and opt-in checkbox.
+- **Contact Form**:
+  - Users can send messages with fields for name, email, team, and enquiry type.
+- **Data Persistence**: LocalStorage for form data (if implemented in future updates).
 
-Responsive Design:
-Optimized for mobile, tablet, and desktop devices.
-Mobile-friendly navigation and footer interactions.
+## Tech Stack
+- **Frontend**: React.js, React Router, Tailwind CSS
+- **Animations**: Framer Motion for smooth transitions
+- **Storage**: LocalStorage (optional for form persistence)
+- **Libraries**:
+  - react-scroll for smooth scrolling on Contact page
+  - react-icons for UI (if used in components)
+- **Tools**: Vite (assumed for development), Netlify for deployment
 
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/design-declares.git
+   cd design-declares
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+4. Open `http://localhost:3000` in your browser.
 
-Interactive Footer:
-Fixed footer with newsletter signup and clickable social media links (Instagram, LinkedIn).
-Privacy Policy and Contact links for user engagement.
+## Usage
+1. **Navigate the Site**:
+   - Visit the **Home** page (`/`) for an overview of the Design Declares initiative.
+   - Explore the **About** page (`/about`) for mission details.
+   - Use the **Contact** page (`/contact`) to send a message.
+   - Check the **Latest** section (`/latest`) and detail pages (`/latest/1` to `/latest/15`) for updates.
+   - Review the **Privacy Policy** (`/privacy-policy`) for data handling information.
+2. **Interact with the Footer**:
+   - Sign up for the newsletter with your email.
+   - Click links to Contact, Instagram, LinkedIn, or Privacy Policy.
+3. **Test Responsiveness**:
+   - Resize the browser or use a mobile device to verify the responsive design.
 
+## Deployment
+- **Live Demo**: https://design-declares.netlify.app/ (replace with your actual URL)
+- Deployed on Netlify with continuous integration from GitHub.
 
-Dynamic Routing:
-Supports multiple pages: Home, About, Contact, Privacy Policy, Latest, and 15 detail pages for updates.
-Built with React Router for seamless navigation.
+## Demo
+- Home page with scroll progress bar
+- Newsletter signup via footer
+- Contact form submission
+- Navigation across pages (Home, About, Contact, Latest, Privacy Policy)
+- Mobile responsiveness
 
-
-Scroll Progress Bar:
-Visual indicator of scroll position for enhanced user experience.
-
-
-Low-Carbon Principles:
-Built with energy-efficient web development practices.
-Hosted using serverless computing for minimal energy consumption.
-
-
-Newsletter Signup:
-Users can subscribe to the Design Declares newsletter with email input and opt-in checkbox.
-
-
-Contact Form:
-Users can send messages with fields for name, email, team, and enquiry type.
-
-
-Data Persistence: LocalStorage for form data (if implemented in future updates).
-
-Tech Stack
-
-Frontend: React.js, React Router, Tailwind CSS
-Animations: Framer Motion for smooth transitions
-Storage: LocalStorage (optional for form persistence)
-Libraries:
-react-scroll for smooth scrolling on Contact page
-react-icons for UI (if used in components)
-
-
-Tools: Vite (assumed for development), Netlify for deployment
-
-Installation
-
-Clone the repository:git clone https://github.com/yourusername/design-declares.git
-cd design-declares
-
-
-Install dependencies:npm install
-
-
-Start the development server:npm start
-
-
-Open http://localhost:3000 in your browser.
-
-Usage
-
-Navigate the Site:
-Visit the Home page (/) for an overview of the Design Declares initiative.
-Explore the About page (/about) for mission details.
-Use the Contact page (/contact) to send a message.
-Check the Latest section (/latest) and detail pages (/latest/1 to /latest/15) for updates.
-Review the Privacy Policy (/privacy-policy) for data handling information.
-
-
-Interact with the Footer:
-Sign up for the newsletter with your email.
-Click links to Contact, Instagram, LinkedIn, or Privacy Policy.
-
-
-Test Responsiveness:
-Resize the browser or use a mobile device to verify the responsive design.
-
-
-
-Deployment
-
-Live Demo: https://design-declares.netlify.app/ (replace with your actual URL)
-Deployed on Netlify with continuous integration from GitHub.
-
-Demo
-
-Home page with scroll progress bar
-Newsletter signup via footer
-Contact form submission
-Navigation across pages (Home, About, Contact, Latest, Privacy Policy)
-Mobile responsiveness
-
-Screenshots
+## Screenshots
 (Coming soon! Add screenshots of key pages like Home, Contact, and Footer.)
-License
-MIT License. See LICENSE for details.
+
+## License
+MIT License. See [LICENSE](LICENSE) for details.
